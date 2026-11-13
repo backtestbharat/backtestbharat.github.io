@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>200 Day Moving Average Strategy on Bitcoin: 200 DMA Win Rate and Backtest After India&#x27;s 30% Crypto Tax</title>
+<meta name="description" content="200 day moving average strategy on Bitcoin, 3-year backtest: 15 trades, 33.3% win rate, +88.2% before and +48.7% after India&#x27;s 30% tax.">
+<link rel="canonical" href="https://backtestbharat.github.io/200-day-moving-average-strategy-bitcoin-backtest-india-tax/">
+<meta property="og:site_name" content="Backtest Bharat">
+<meta property="og:locale" content="en_IN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="200 Day Moving Average Strategy on Bitcoin: 200 DMA Win Rate and Backtest After India&#x27;s 30% Crypto Tax">
+<meta property="og:description" content="200 day moving average strategy on Bitcoin, 3-year backtest: 15 trades, 33.3% win rate, +88.2% before and +48.7% after India&#x27;s 30% tax.">
+<meta property="og:url" content="https://backtestbharat.github.io/200-day-moving-average-strategy-bitcoin-backtest-india-tax/">
+<meta property="og:image" content="https://backtestbharat.github.io/img/200-day-moving-average-strategy-bitcoin-backtest-india-tax/e9-chart_m.png">
+<meta property="og:image:alt" content="200 day moving average strategy vs holding Bitcoin, Binance BTC/USDT 3-year backtest before and after India&#x27;s 30% crypto tax">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="200 Day Moving Average Strategy on Bitcoin: 200 DMA Win Rate and Backtest After India&#x27;s 30% Crypto Tax">
+<meta name="twitter:description" content="200 day moving average strategy on Bitcoin, 3-year backtest: 15 trades, 33.3% win rate, +88.2% before and +48.7% after India&#x27;s 30% tax.">
+<meta name="twitter:image" content="https://backtestbharat.github.io/img/200-day-moving-average-strategy-bitcoin-backtest-india-tax/e9-chart_m.png">
+<meta name="msvalidate.01" content="7EBCBE0DADDDE1FE188175B416DD3E2A">
+<link rel="icon" type="image/png" sizes="180x180" href="/favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/bb-logo-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Backtest Bharat" href="/feed.xml">
+<link rel="preload" href="/assets/fonts/source-serif-4-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<meta property="article:published_time" content="2026-11-13T12:46:00+05:30">
+<meta property="article:modified_time" content="2026-11-13T12:46:00+05:30">
+<meta property="og:image:width" content="1440">
+<meta property="og:image:height" content="2426">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"200 Day Moving Average Strategy on Bitcoin: 200 DMA Win Rate and Backtest After India's 30% Crypto Tax","description":"200 day moving average strategy on Bitcoin, 3-year backtest: 15 trades, 33.3% win rate, +88.2% before and +48.7% after India's 30% tax.","image":["https://backtestbharat.github.io/img/200-day-moving-average-strategy-bitcoin-backtest-india-tax/e9-chart_m.png"],"datePublished":"2026-11-13T12:46:00+05:30","dateModified":"2026-11-13T12:46:00+05:30","inLanguage":"en-IN","author":{"@type":"Organization","name":"Backtest Bharat","url":"https://backtestbharat.github.io/"},"publisher":{"@type":"Organization","name":"Backtest Bharat","url":"https://backtestbharat.github.io/","logo":{"@type":"ImageObject","url":"https://backtestbharat.github.io/assets/bb-logo-192.png","width":192,"height":192}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://backtestbharat.github.io/200-day-moving-average-strategy-bitcoin-backtest-india-tax/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://backtestbharat.github.io/"},{"@type":"ListItem","position":2,"name":"All backtests","item":"https://backtestbharat.github.io/all-backtests/"},{"@type":"ListItem","position":3,"name":"200 Day Moving Average Strategy on Bitcoin: 200 DMA Win Rate and Backtest After India's 30% Crypto Tax","item":"https://backtestbharat.github.io/200-day-moving-average-strategy-bitcoin-backtest-india-tax/"}]}</script>
+<style>
+.thp{font-size:17px;line-height:1.7;color:#191f28;font-family:Inter,'Helvetica Neue',Arial,sans-serif}
+.thp p{margin:0 0 14px}
+.thp h2{font-size:23px;line-height:1.4;margin:40px 0 14px;padding-top:6px;border-top:2px solid #eef0f3;color:#191f28}
+.thp .tldr{background:#f2f8ff;border-radius:14px;padding:18px 20px;margin:18px 0 22px}
+.thp .tldr b.t{display:block;font-size:15px;color:#1b64da;margin-bottom:6px}
+.thp .tldr ul{margin:0;padding-left:20px}.thp .tldr li{margin:4px 0}
+.thp .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0 20px}
+.thp .stat{background:#f9fafb;border-radius:12px;padding:14px 10px;text-align:center}
+.thp .stat .n{font-size:24px;font-weight:800;color:#1b64da;line-height:1.2}.thp .stat .n.g{color:#4e5968}.thp .stat .n.r{color:#e42939}
+.thp .stat .l{font-size:13px;color:#6b7684;margin-top:4px}
+.thp .toc{background:#f9fafb;border-radius:12px;padding:14px 18px;margin:0 0 10px;font-size:15px}
+.thp .toc ol{margin:6px 0 0;padding-left:20px}.thp .toc a{color:#333d4b;text-decoration:none}
+.thp .rule{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1.5px solid #e5e8eb;border-radius:12px;padding:12px 14px;margin:8px 0}
+.thp .rule .k{flex:none;width:28px;height:28px;border-radius:50%;background:#3182f6;color:#fff;font-weight:800;text-align:center;line-height:28px;font-size:15px}
+.thp .rule b{display:block}
+.thp .warn{background:#fff8e6;border-left:4px solid #ffb020;border-radius:8px;padding:12px 16px;margin:14px 0;font-size:16px}
+.thp table{width:100%;border-collapse:collapse;font-size:15px;margin:10px 0 18px}
+.thp th,.thp td{border-bottom:1px solid #e5e8eb;padding:10px 8px;text-align:left}.thp th{background:#f2f4f6;font-weight:700}
+.thp td.up{color:#1b64da;font-weight:700}.thp td.dn{color:#e42939;font-weight:700}
+.thp .cta{background:#191f28;color:#fff;border-radius:14px;padding:20px;margin:18px 0}
+.thp .cta p{margin:0 0 12px;color:#e5e8eb}.thp .cta b{color:#fff}
+.thp .btn{display:inline-block;background:#3182f6;color:#fff!important;text-decoration:none;font-weight:700;border-radius:10px;padding:12px 18px;margin:4px 6px 4px 0}
+.thp .btn.w{background:#fff;color:#191f28!important}
+.thp .small{font-size:13px;color:#8b95a1;line-height:1.6}
+.thp details{border:1.5px solid #e5e8eb;border-radius:12px;padding:12px 16px;margin:8px 0}
+.thp summary{font-weight:700;cursor:pointer}
+.thp details p{margin:10px 0 0}
+@media(max-width:480px){.thp{font-size:16px}.thp .stats{grid-template-columns:1fr 1fr 1fr;gap:6px}.thp .stat .n{font-size:19px}.thp h2{font-size:20px}}
+</style>
+<style>.thp .bnx{display:none;background:#fff8e1;border:2px solid #f0b90b;border-radius:14px;padding:18px 20px;margin:16px 0}.thp .bnx .btn{background:#f0b90b;color:#191f28!important}.thp .asci{font-size:13px;font-weight:700;color:#4e5968;margin:0 0 10px}</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head compact">
+<p class="brand"><a href="/"><img src="/assets/bb-logo-96.png" alt="" width="96" height="96"><span>Backtest Bharat</span></a></p>
+<p class="tag">Independent backtests for Indian crypto traders. After fees, after tax.</p>
+<nav class="tabs" aria-label="Main"><a href="/">Home</a><a href="/all-backtests/">All Backtests</a><a href="/about/">About</a><a href="/disclaimer/">Disclaimer</a><a href="/privacy-policy/">Privacy Policy</a></nav>
+</header>
+<main id="main">
+<article>
+<nav class="bbcrumb" aria-label="Breadcrumb"><a href="/">Home</a><i aria-hidden="true">/</i><a href="/all-backtests/">All backtests</a><i aria-hidden="true">/</i><a href="/all-backtests/#200-dma">200 DMA</a></nav>
+<h1 class="page-title">200 Day Moving Average Strategy on Bitcoin: 200 DMA Win Rate and Backtest After India&#x27;s 30% Crypto Tax</h1>
+<p class="post-meta"><time datetime="2026-11-13T12:46:00+05:30">13 Nov 2026</time> · Backtest Bharat</p>
+<div class="post-body">
+<div class="thp">
+<p>The 200 day moving average strategy returned +88.2% on Binance BTC/USDT from Nov 2023 to Nov 2026, with a 0.1% fee per side, against +105.4% for holding. <b>But it sat in cash for 289 days while Bitcoin fell 45%, and its worst drop was -31.6% against -53.0% for holding.</b></p>
+<p>Paul Tudor Jones founded the Tudor Group in 1980. In October 2025 he told CNBC that "nothing good ever happens under the 200 day moving average in any asset". We ran that one line on 3 years of Bitcoin.</p>
+
+<div class="tldr"><b class="t">Key takeaways</b>
+<ul>
+<li><b>The 200 day moving average strategy:</b> hold Bitcoin when the daily close is above its 200-day average (200 DMA), hold cash when it is below.</li>
+<li>On <b>Binance BTC/USDT, Nov 2023 to Nov 2026</b> (0.1% fee) it made 15 trades with a 33.3% win rate. ₹1 lakh became <b>₹1,88,200</b>. Simply holding Bitcoin made it ₹2,05,400.</li>
+<li>In the last 1 year the rule made +8.5% while holding lost -28.0%.</li>
+<li>After India's 30% crypto tax the rule kept <b>₹1,48,700</b>. Holding kept ₹1,73,800.</li>
+</ul></div>
+
+<div class="stats">
+<div class="stat"><div class="n">+88.2%</div><div class="l">200 DMA rule, before tax</div></div>
+<div class="stat"><div class="n g">+48.7%</div><div class="l">After India's 30% tax</div></div>
+<div class="stat"><div class="n g">33.3%</div><div class="l">Win rate, 15 trades</div></div>
+</div>
+
+<div class="toc"><b>Contents</b><ol>
+<li><a href="#what">What is the 200 DMA?</a></li>
+<li><a href="#who">Who is Paul Tudor Jones?</a></li>
+<li><a href="#rules">The rule we tested</a></li>
+<li><a href="#example">Real chart: one win, one loss</a></li>
+<li><a href="#result">3-year Binance backtest and win rate</a></li>
+<li><a href="#defence">What the rule is for: 289 days in cash</a></li>
+<li><a href="#tax">After India's 30% crypto tax</a></li>
+<li><a href="#tds">1% TDS on 10 sales a year</a></li>
+<li><a href="#ema">200 DMA vs 200 EMA</a></li>
+<li><a href="#tools">Tools</a></li>
+<li><a href="#watch">Videos</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol></div>
+
+<h2 id="what">What is the 200 DMA?</h2>
+<ul>
+<li>DMA means day moving average. The 200 DMA is the average of the last 200 daily closing prices</li>
+<li>Every day the newest close is added and the oldest one is dropped, so the line moves slowly</li>
+<li>Price above the line is read as a long-term uptrend. Price below it is read as a downtrend</li>
+</ul>
+<p>Type "200 dma" into Google in India and it suggests "200 dma means" and "200 dma of nifty 50". Type "200 day moving average strategy" and it suggests "200 day moving average bitcoin strategy". This post tests that last one.</p>
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;margin:16px 0 6px"><iframe src="https://www.youtube-nocookie.com/embed/Mcp_l8ftbJ0" title="Nifty 200 DMA को समझ लेंगे तो मार्केट समझ लेंगे" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<p class="small" style="margin:0 0 18px;color:#6b7684">▶ Hindi: the 200 DMA on Nifty (3 minutes). Source: MoneyControl Hindi (YouTube, 2024)</p>
+
+<h2 id="who">Who is Paul Tudor Jones?</h2>
+<ul>
+<li>Paul Tudor Jones II founded the Tudor Group in 1980 and is its Co-Chairman and Chief Investment Officer</li>
+<li>In May 2020 he told CNBC that he had "just over 1% of my assets in bitcoin" and called it "a great speculation"</li>
+<li>In an interview printed in Tony Robbins' 2014 book <i>Money: Master the Game</i>, he is quoted as saying: "My metric for everything I look at is the 200-day moving average of closing prices."</li>
+<li>In the same interview: "You play defense, and you get out."</li>
+</ul>
+<div class="separator" style="text-align:center;margin:16px 0 6px"><img src="/img/200-day-moving-average-strategy-bitcoin-backtest-india-tax/e9-quote.png" alt="Paul Tudor Jones on CNBC Squawk Box, Oct 6, 2025: nothing good ever happens under the 200 day moving average in any asset" style="max-width:100%;height:auto;border-radius:12px;border:1px solid #e5e8eb" border="0" width="1440" height="1550" /></div>
+<p class="small" style="margin:0 0 18px;color:#6b7684">His own words on CNBC, Oct 6, 2025. Source: CNBC transcript, cnbc.com</p>
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;margin:16px 0 6px"><iframe src="https://www.youtube-nocookie.com/embed/SmH1avX_RVc" title="Paul Tudor Jones on bitcoin: It&#x27;s like investing early in a tech company" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<p class="small" style="margin:0 0 18px;color:#6b7684">▶ Paul Tudor Jones on how he views bitcoin (2 minutes). Source: CNBC Television (YouTube, 2020)</p>
+<div class="warn">Jones has not published this as a trading system. He calls the 200-day moving average his metric for the trend and a way to play defense. So this post tests the simplest reading of his sentence: above the line hold, below the line cash. It is not a test of how he or his fund trades.</div>
+
+<h2 id="rules">The rule we tested</h2>
+<div class="rule"><span class="k">1</span><div><b>One line</b>The 200-day simple moving average of daily closing prices</div></div>
+<div class="rule"><span class="k">2</span><div><b>Buy</b>When a daily candle closes above the line, buy at the next day's open</div></div>
+<div class="rule"><span class="k">3</span><div><b>Sell</b>When a daily candle closes below the line, sell at the next day's open</div></div>
+<div class="rule"><span class="k">4</span><div><b>Nothing else</b>No stop-loss, no target, no short selling. Spot only, full capital in Bitcoin or full cash</div></div>
+<p>On Binance the daily candle closes at 00:00 UTC, which is <b>5:30 AM in India</b>. So the rule needs one look at the chart per day.</p>
+<div class="separator" style="text-align:center;margin:16px 0 16px"><img src="/img/200-day-moving-average-strategy-bitcoin-backtest-india-tax/e9-price.png" alt="Bitcoin daily close and its 200-day moving average (200 DMA), Nov 2023 to Nov 2026, with the days the rule held Bitcoin shaded" style="max-width:100%;height:auto;border-radius:12px" border="0" width="1440" height="2322" loading="lazy" /></div>
+<p>The blue areas are the days the rule held Bitcoin: 695 of 1,096 days. The white gaps are days in cash.</p>
+
+<h2 id="example">Real chart: one win, one loss</h2>
+<table>
+<tr><th>Step</th><th>Win</th><th>Loss</th></tr>
+<tr><td>Signal</td><td>Oct 14, 2024 close $66,084, line at $63,363</td><td>Mar 12, 2025 close $83,680, line at $83,559</td></tr>
+<tr><td>Bought</td><td>Oct 15, 2024 at $66,084</td><td>Mar 13, 2025 at $83,680</td></tr>
+<tr><td>Sold</td><td>Mar 10, 2025 at $80,734</td><td>Mar 14, 2025 at $81,116</td></tr>
+<tr><td>Held</td><td>146 days</td><td>1 day</td></tr>
+<tr><td>Result after fees</td><td class="up">+21.93%</td><td class="dn">-3.26%</td></tr>
+</table>
+<p>The loss was the first of four. Between Mar 13 and Mar 29, 2025 the price crossed the line again and again, and the rule bought and sold four times. <b>All four trades lost: -3.26%, -1.87%, -3.21% and -2.12%, about -10.1% together.</b></p>
+<p>That is the weak point of this strategy. When the price sits on the line, the rule keeps buying a little higher and selling a little lower.</p>
+
+<h2 id="result">3-year Binance backtest and win rate</h2>
+<div class="separator" style="text-align:center;margin:16px 0 16px"><img src="/img/200-day-moving-average-strategy-bitcoin-backtest-india-tax/e9-chart_m.png" alt="200 day moving average strategy vs holding Bitcoin, Binance BTC/USDT 3-year backtest before and after India&#x27;s 30% crypto tax" style="max-width:100%;height:auto;border-radius:12px" border="0" width="1440" height="2426" loading="lazy" /></div>
+<table>
+<tr><th>Metric</th><th>200 DMA rule</th><th>HODL</th></tr>
+<tr><td>₹1 lakh after 3 years, before tax</td><td>₹1,88,200</td><td class="up">₹2,05,400</td></tr>
+<tr><td>₹1 lakh after 3 years, after 30% tax</td><td>₹1,48,700</td><td class="up">₹1,73,800</td></tr>
+<tr><td>3-year return, before tax</td><td>+88.2%</td><td class="up">+105.4%</td></tr>
+<tr><td>Worst drop (max drawdown)</td><td class="up">-31.6%</td><td class="dn">-53.0%</td></tr>
+<tr><td>Last 1 year</td><td class="up">+8.5%</td><td class="dn">-28.0%</td></tr>
+<tr><td>Trades and win rate</td><td>15 trades, 33.3%</td><td>-</td></tr>
+<tr><td>Average win / loss</td><td>+20.31% / -2.34%</td><td>-</td></tr>
+<tr><td>Days holding Bitcoin</td><td>695 of 1,096</td><td>1,096</td></tr>
+</table>
+<p>A 33.3% win rate sounds bad. It works because the average winner (+20.31%) is almost nine times the size of the average loser (-2.34%). Winners were held 133 days on average, losers 3 days.</p>
+<div class="warn"><b>The uncomfortable number:</b> 10 of the 15 trades lost money. Two trades, +55.13% and +21.93%, made the result. The other 13 trades together returned -0.5%.</div>
+<p>The biggest winner also started on day one. On Nov 10, 2023 Bitcoin was already 28.5% above its 200-day line, so the rule bought at the first open. A test that starts on a different day gets a different first trade.</p>
+<p>Fees were a small part of the story. With zero fees the result is +94.0% instead of +88.2%, because the rule trades only about 5 times a year. The <a href="https://backtestbharat.blogspot.com/2026/11/9-20-ema-strategy-win-rate-bitcoin-backtest-india-tax.html">9 20 EMA crossover test</a> shows what happens when the same kind of rule trades far more often.</p>
+
+<h2 id="defence">What the rule is for: 289 days in cash</h2>
+<div class="separator" style="text-align:center;margin:16px 0 16px"><img src="/img/200-day-moving-average-strategy-bitcoin-backtest-india-tax/e9-cash.png" alt="200 DMA rule on Bitcoin: sold Nov 4, 2025 at $106,583, lowest close $58,625 on Jun 30, 2026, bought back Aug 20, 2026 at $69,335" style="max-width:100%;height:auto;border-radius:12px" border="0" width="1440" height="1710" loading="lazy" /></div>
+<ul>
+<li>The highest daily close in the test was $124,659 on Oct 6, 2025</li>
+<li>On Nov 3, 2025 Bitcoin closed below the line. The rule sold the next morning at $106,583, 14.5% under that high</li>
+<li>It then stayed in cash for 289 days. The lowest close in that time was $58,625 on Jun 30, 2026, 45.0% below the selling price</li>
+<li>It bought back on Aug 20, 2026 at $69,335, 18.3% above that low and 34.9% cheaper than it had sold</li>
+</ul>
+<table>
+<tr><th>Last 1 year</th><th>200 DMA rule</th><th>HODL</th></tr>
+<tr><td>Return, before tax</td><td class="up">+8.5%</td><td class="dn">-28.0%</td></tr>
+<tr><td>₹1 lakh became</td><td class="up">₹1,08,500</td><td class="dn">₹72,000</td></tr>
+</table>
+<p>The rule does not sell the top and does not buy the bottom. It gives up the first part of every fall and the first part of every rise. What it avoids is the middle of a long fall.</p>
+<p><b>The price of that protection is the 10 small losses. Together they cost -21.1%.</b> That is why the rule still finished behind holding over the full 3 years.</p>
+
+<h2 id="tax">After India's 30% crypto tax</h2>
+<div class="separator" style="text-align:center;margin:16px 0 16px"><img src="/img/200-day-moving-average-strategy-bitcoin-backtest-india-tax/e9-tax.png" alt="Rs 1 lakh after 15 trades of the 200 DMA rule: Rs 1,88,200 before tax, Rs 1,48,700 after India&#x27;s 30% crypto tax, HODL Rs 1,73,800" style="max-width:100%;height:auto;border-radius:12px" border="0" width="1440" height="1710" loading="lazy" /></div>
+<ul>
+<li>Any income from the transfer of a virtual digital asset is taxed at 30%. The Table lists no separate rate for long holdings</li>
+<li>No set-off of a loss is allowed, and the loss cannot be carried forward to later tax years</li>
+<li>This rule sits in Section 194 (Table, item 4) of the Income-tax Act, 2025. The Income-tax Act, 1961 had the same rule in Section 115BBH</li>
+</ul>
+<div class="separator" style="text-align:center;margin:16px 0 6px"><img src="/img/200-day-moving-average-strategy-bitcoin-backtest-india-tax/ref-itd-194m.jpg" alt="Income-tax Act 2025 Section 194 Table item 4: income from transfer of virtual digital asset taxed at 30%, no set-off of loss" style="max-width:100%;height:auto;border-radius:12px;border:1px solid #e5e8eb" border="0" width="1240" height="825" loading="lazy" /></div>
+<p class="small" style="margin:0 0 18px;color:#6b7684">The actual rule: 30% rate, and losses cannot be set off or carried forward. Source: Income Tax Department, Govt of India</p>
+<table>
+<tr><th></th><th>200 DMA rule</th><th>HODL</th></tr>
+<tr><td>Times you sell</td><td>15</td><td>1</td></tr>
+<tr><td>Winning sales taxed</td><td>5</td><td>1</td></tr>
+<tr><td>Losing sales, no relief</td><td class="dn">10</td><td>0</td></tr>
+<tr><td>What tax took from ₹1 lakh's profit</td><td class="dn">₹39,500 of ₹88,200</td><td>₹31,600 of ₹1,05,400</td></tr>
+</table>
+<p>Holding loses exactly 30% of its profit. The rule lost about 45% of its profit. The 5 winners are taxed one by one, the 10 losers give no relief, and tax paid early cannot grow in later trades.</p>
+<p><b>So the gap gets wider after tax: ₹1,48,700 for the rule against ₹1,73,800 for holding.</b> The holding figure assumes you sell once at the end and pay tax once.</p>
+
+<h2 id="tds">1% TDS on 10 sales a year</h2>
+<p>The Income Tax Department's guide says tax is deducted at 1% of the sale consideration, and that when you sell through an exchange which pays you directly, the exchange deducts it. Its TDS FAQ says you claim the credit of that tax in your return of income.</p>
+<div class="warn"><b>This rule sold 10 times in FY 2024-25 and 4 times in FY 2025-26.</b> If 1% is taken from every sale, 0.99 multiplied 10 times is 0.904. Before any profit or loss, about 9.6% of the capital would be sitting as TDS credit by the end of the busier year.</div>
+<p>Our backtest does not subtract this cash lock, so the real result would be a little lower. Check how your own exchange applies TDS.</p>
+
+<h2 id="ema">200 DMA vs 200 EMA</h2>
+<p>Google in India also suggests "200 ema strategy win rate" and "200 dma vs 200 ema". An EMA gives more weight to recent prices, so it turns a little faster. We ran the same rule with a 200 EMA, and with shorter simple averages.</p>
+<table>
+<tr><th>Line</th><th>Trades, win rate</th><th>Before tax / after 30% tax</th></tr>
+<tr><td>200 DMA (simple)</td><td>15 trades, 33.3%</td><td>+88.2% / +48.7%</td></tr>
+<tr><td>200 EMA</td><td>20 trades, 20.0%</td><td>+80.6% / +37.2%</td></tr>
+<tr><td>100 DMA</td><td>22 trades, 18.2%</td><td>+100.8% / +48.8%</td></tr>
+<tr><td>50 DMA</td><td>34 trades, 26.5%</td><td>+145.0% / +64.2%</td></tr>
+<tr><td>HODL</td><td>1 purchase</td><td class="up">+105.4% / +73.8%</td></tr>
+</table>
+<p>The 200 EMA made more trades, won fewer of them and had a deeper worst drop (-38.3% against -31.6%). The difference is small, and one 3-year period cannot settle which line is better.</p>
+<div class="warn">The 50-day line did best in this window. That does not make 50 the right number. Picking the best setting after seeing the results is called curve fitting. <b>After tax, none of the four lines beat holding.</b></div>
+
+<h2 id="tools">Tools to check it yourself</h2>
+<p>The live chart below is Bitcoin on Binance, daily candles in India time. On TradingView, add a Moving Average from the Indicators menu and set its length to 200 to see the line.</p>
+<div style="height:460px;width:100%;margin:12px 0 6px"><div class="tradingview-widget-container" style="height:100%;width:100%"><div class="tradingview-widget-container__widget" style="height:100%;width:100%"></div>
+<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>{"autosize":true,"symbol":"BINANCE:BTCUSDT","interval":"D","timezone":"Asia/Kolkata","theme":"light","style":"1","locale":"en","hide_side_toolbar":true,"hide_top_toolbar":true,"allow_symbol_change":false,"support_host":"https://www.tradingview.com"}</script></div></div>
+<p class="small" style="margin:0 0 18px;color:#6b7684">Live chart: TradingView widget, BINANCE:BTCUSDT daily</p>
+<div class="cta">
+<p><b>See the 200 DMA on your own chart</b><br>Add a Moving Average to a daily Bitcoin chart, set the length to 200, and you will see every signal in this post. An alert on the line saves you the 5:30 AM check.</p>
+<a class="btn" href="https://www.tradingview.com/?aff_id=1174338&amp;source=blog_en" target="_blank" rel="sponsored nofollow">Open TradingView</a>
+<p class="small" style="margin:12px 0 0;color:#b0b8c1">#Ad · Affiliate link. If you buy a paid TradingView plan through it, Backtest Bharat earns a commission at no extra cost to you.</p>
+</div>
+<div class="bnx" id="bnx">
+<p class="asci">Crypto products and NFTs are unregulated and can be highly risky. There may be no regulatory recourse for any loss from such transactions.</p>
+<p><b>Trading on Binance from India?</b> Binance completed registration with India's Financial Intelligence Unit (FIU-IND) in 2024. This backtest uses Binance's 0.1% spot fee.</p>
+<a class="btn" id="bnlink" href="#" target="_blank" rel="sponsored nofollow">Open a Binance account</a>
+<p class="small" style="margin:10px 0 0">#Ad · Referral link. Backtest Bharat may earn a share of trading fees. Shown only to readers in eligible regions. Not investment advice.</p>
+</div>
+
+<h2 id="watch">Watch: how traders use the 200-day moving average</h2>
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;margin:16px 0 6px"><iframe src="https://www.youtube-nocookie.com/embed/LhctbTBJZWM" title="How to Use the 200 Day Moving Average" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<p class="small" style="margin:0 0 18px;color:#6b7684">▶ English: how to use the 200 day moving average (15 minutes). Source: Brian Shannon (YouTube, 2023)</p>
+
+<h2 id="faq">FAQ</h2>
+<details><summary>What is the win rate of the 200 day moving average strategy?</summary><p>On Binance BTC/USDT from Nov 2023 to Nov 2026, with a 0.1% fee per side, 5 of 15 trades won, a win rate of 33.3%. The average winner made +20.31% and the average loser lost -2.34%. Past results do not guarantee future returns.</p></details>
+<details><summary>What does 200 DMA mean?</summary><p>200 DMA means 200-day moving average: the average of the last 200 daily closing prices. A price above the line is read as a long-term uptrend, and a price below it as a downtrend.</p></details>
+<details><summary>Does the 200 day moving average strategy work on Bitcoin?</summary><p>On Binance BTC/USDT from Nov 2023 to Nov 2026, with a 0.1% fee per side, it returned +88.2% against +105.4% for holding, with a worst drop of -31.6% against -53.0%. In the last 1 year it made +8.5% while holding lost -28.0%. This is one coin and one 3-year period, not a general rule.</p></details>
+<details><summary>200 DMA vs 200 EMA: which is better?</summary><p>On Binance BTC/USDT from Nov 2023 to Nov 2026, with a 0.1% fee per side, the simple 200 DMA made 15 trades and returned +88.2%. The 200 EMA made 20 trades and returned +80.6%. After India's 30% tax they kept +48.7% and +37.2%. One period cannot settle it.</p></details>
+<details><summary>How does India's 30% crypto tax change the 200 day moving average result?</summary><p>On Binance BTC/USDT from Nov 2023 to Nov 2026, with a 0.1% fee per side, 30% tax on each winning trade and no set-off for losses, ₹1 lakh ended at ₹1,48,700 instead of ₹1,88,200. Holding Bitcoin, taxed once at the end, ended at ₹1,73,800 instead of ₹2,05,400.</p></details>
+<details><summary>Did Paul Tudor Jones publish the 200-day moving average rule as a trading system?</summary><p>No. He has called the 200-day moving average his metric for the trend and said he gets out below it. This post tests the simplest reading of that sentence, not how he or his fund trades.</p></details>
+<details><summary>What time should I check the 200 DMA for Bitcoin in India?</summary><p>Binance daily candles close at 00:00 UTC, which is 5:30 AM IST. The close and the 200-day average for the day are fixed at that time.</p></details>
+
+<h2>Method and sources</h2>
+<ul class="small">
+<li>Data: Binance BTC/USDT daily candles (00:00 UTC), Nov 10, 2023 to Nov 9, 2026. Candles from Jun 1, 2022 were used to warm up the 200-day average. Fee 0.1% per side, long only, spot, no leverage, no slippage, full capital on each trade</li>
+<li>Rule details: simple average of 200 daily closes, signal day included. Signals use the closed daily candle and orders fill at the next day's open. On the first day the position is set by the previous day's close. The position still open on Nov 9, 2026 is closed at that day's close and counted as the 15th trade</li>
+<li>A second, separately written calculation on a separate data download gave the same 15 trades, +88.2% before tax, +48.7% after tax and -31.6% worst drop</li>
+<li>Tax model: 30% of each winning trade's profit deducted at exit, losses not set off (Income-tax Act, 2025, Section 194 Table item 4). Simplified: the 1% TDS is not modelled and nothing beyond the 30% rate is added. HODL after tax assumes one sale on Nov 9, 2026. Check with a chartered accountant</li>
+<li>Paul Tudor Jones: <a href="https://www.tudor.com" target="_blank" rel="nofollow">tudor.com</a> (founded the Tudor Group in 1980); <a href="https://www.cnbc.com/2025/10/06/cnbc-transcript-tudor-investments-founder-cio-paul-tudor-jones-on-squawk-box-today.html" target="_blank" rel="nofollow">CNBC transcript, Squawk Box, Oct 6, 2025</a>; <a href="https://www.cnbc.com/2020/05/11/paul-tudor-jones-calls-bitcoin-a-great-speculation-says-he-has-almost-2percent-of-his-assets-in-it.html" target="_blank" rel="nofollow">CNBC, May 11, 2020</a></li>
+<li>The "metric" quote is from an interview in Tony Robbins, <i>Money: Master the Game</i> (2014). We read it in the excerpt published by fund manager Meb Faber: <a href="https://mebfaber.com/2014/11/06/paul-tudor-jones-on-the-200-day-moving-average/" target="_blank" rel="nofollow">mebfaber.com, Nov 6, 2014</a>. We did not check the printed book</li>
+<li>Tax sources: <a href="https://www.incometaxindia.gov.in/w/section-194-78" target="_blank" rel="nofollow">Income-tax Act, 2025, Section 194</a>; <a href="https://www.incometaxindia.gov.in/w/section-115bbh-5" target="_blank" rel="nofollow">Income-tax Act, 1961, Section 115BBH</a>; <a href="https://www.incometaxindia.gov.in/w/tds-on-payment-for-the-transfer-of-virtual-digital-assets-vdas-" target="_blank" rel="nofollow">Income Tax Department, TDS on transfer of VDAs</a>; <a href="https://www.incometaxindia.gov.in/documents/d/guest/faqs-on-tax-deducted-source" target="_blank" rel="nofollow">Income Tax Department, FAQs on TDS</a></li>
+<li>Binance in India: <a href="https://sansad.in/getFile/loksabhaquestions/annex/187/AU5805_lMTYNK.pdf?source=pqals" target="_blank" rel="nofollow">Ministry of Finance, answer to Lok Sabha Unstarred Question 5805 (Mar 30, 2026), Annexure I</a>; <a href="https://fiuindia.gov.in/pdfs/judgements/Binance_Order_10_2024.pdf" target="_blank" rel="nofollow">FIU-IND order, June 19, 2024</a>; <a href="https://www.binance.com/en/blog/regulation/3022489348045738409" target="_blank" rel="nofollow">Binance blog, Aug 15, 2024</a></li>
+<li>Search phrases: Google autocomplete for India, checked Nov 12, 2026</li>
+<li>Last checked: Nov 12, 2026</li>
+</ul>
+<p class="small">This article is for education only and is not investment advice. Results are from past data and do not guarantee future returns. Crypto trading can lose money. Crypto products and NFTs are unregulated and can be highly risky. There may be no regulatory recourse for any loss from such transactions.</p>
+</div>
+<script>(function(){var REF="https://www.binance.com/en/register?ref=21711593";var ok={"IN":1};function show(c){if(ok[c]){var b=document.getElementById("bnx"),a=document.getElementById("bnlink");if(b&&a){a.href=REF;b.style.display="block";}}}fetch("https://1.1.1.1/cdn-cgi/trace").then(function(r){return r.text()}).then(function(t){var m=t.match(/loc=([A-Z]{2})/);show(m?m[1]:"")}).catch(function(){fetch("https://get.geojs.io/v1/ip/country.json").then(function(r){return r.json()}).then(function(j){show(j.country)}).catch(function(){})});})();</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is the win rate of the 200 day moving average strategy?","acceptedAnswer":{"@type":"Answer","text":"On Binance BTC/USDT from Nov 2023 to Nov 2026, with a 0.1% fee per side, 5 of 15 trades won, a win rate of 33.3%. The average winner made +20.31% and the average loser lost -2.34%. Past results do not guarantee future returns."}},
+{"@type":"Question","name":"What does 200 DMA mean?","acceptedAnswer":{"@type":"Answer","text":"200 DMA means 200-day moving average: the average of the last 200 daily closing prices. A price above the line is read as a long-term uptrend, and a price below it as a downtrend."}},
+{"@type":"Question","name":"Does the 200 day moving average strategy work on Bitcoin?","acceptedAnswer":{"@type":"Answer","text":"On Binance BTC/USDT from Nov 2023 to Nov 2026, with a 0.1% fee per side, it returned +88.2% against +105.4% for holding, with a worst drop of -31.6% against -53.0%. In the last 1 year it made +8.5% while holding lost -28.0%. This is one coin and one 3-year period, not a general rule."}},
+{"@type":"Question","name":"200 DMA vs 200 EMA: which is better?","acceptedAnswer":{"@type":"Answer","text":"On Binance BTC/USDT from Nov 2023 to Nov 2026, with a 0.1% fee per side, the simple 200 DMA made 15 trades and returned +88.2%. The 200 EMA made 20 trades and returned +80.6%. After India's 30% tax they kept +48.7% and +37.2%. One period cannot settle it."}},
+{"@type":"Question","name":"How does India's 30% crypto tax change the 200 day moving average result?","acceptedAnswer":{"@type":"Answer","text":"On Binance BTC/USDT from Nov 2023 to Nov 2026, with a 0.1% fee per side, 30% tax on each winning trade and no set-off for losses, ₹1 lakh ended at ₹1,48,700 instead of ₹1,88,200. Holding Bitcoin, taxed once at the end, ended at ₹1,73,800 instead of ₹2,05,400."}},
+{"@type":"Question","name":"Did Paul Tudor Jones publish the 200-day moving average rule as a trading system?","acceptedAnswer":{"@type":"Answer","text":"No. He has called the 200-day moving average his metric for the trend and said he gets out below it. This post tests the simplest reading of that sentence, not how he or his fund trades."}},
+{"@type":"Question","name":"What time should I check the 200 DMA for Bitcoin in India?","acceptedAnswer":{"@type":"Answer","text":"Binance daily candles close at 00:00 UTC, which is 5:30 AM IST. The close and the 200-day average for the day are fixed at that time."}}
+]}</script>
+</div>
+</article>
+<nav class="bbnav" aria-label="More backtests"><h2>More backtests</h2>
+<ul class="plist">
+<li><a href="/buy-the-dip-strategy-bitcoin-25-day-moving-average/">Buy the Dip Strategy on Bitcoin: Takashi Kotegawa&#x27;s 25-Day Moving Average Rule Gave 1 Trade in 3 Years</a><time datetime="2026-11-13T12:45:00+05:30">13 Nov 2026</time><p>We tested the 25-day moving average buy the dip rule on 3 years of Bitcoin: 1 trade, +11.6% before tax, +8.1% after India&#x27;s 30% tax. HODL: +105.4%.</p></li>
+</ul>
+<a class="all" href="/all-backtests/">All backtests (2) →</a></nav>
+</main>
+<footer class="site-foot"><div>
+<p>For education only, not investment advice. Backtests use past data and do not guarantee future returns. We are not SEBI registered.</p>
+<p>Crypto products and NFTs are unregulated and can be highly risky. There may be no regulatory recourse for any loss from such transactions.</p>
+<p><a href="/disclaimer/">Disclaimer</a> · <a href="/privacy-policy/">Privacy Policy</a> · <a href="https://backtestbharat.blogspot.com/p/all-backtests.html">Earlier posts</a></p>
+<p>© 2026 Backtest Bharat</p>
+</div></footer>
+</body>
+</html>

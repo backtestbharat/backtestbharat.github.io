@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Buy the Dip Strategy on Bitcoin: Takashi Kotegawa&#x27;s 25-Day Moving Average Rule Gave 1 Trade in 3 Years</title>
+<meta name="description" content="We tested the 25-day moving average buy the dip rule on 3 years of Bitcoin: 1 trade, +11.6% before tax, +8.1% after India&#x27;s 30% tax. HODL: +105.4%.">
+<link rel="canonical" href="https://backtestbharat.github.io/buy-the-dip-strategy-bitcoin-25-day-moving-average/">
+<meta property="og:site_name" content="Backtest Bharat">
+<meta property="og:locale" content="en_IN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Buy the Dip Strategy on Bitcoin: Takashi Kotegawa&#x27;s 25-Day Moving Average Rule Gave 1 Trade in 3 Years">
+<meta property="og:description" content="We tested the 25-day moving average buy the dip rule on 3 years of Bitcoin: 1 trade, +11.6% before tax, +8.1% after India&#x27;s 30% tax. HODL: +105.4%.">
+<meta property="og:url" content="https://backtestbharat.github.io/buy-the-dip-strategy-bitcoin-25-day-moving-average/">
+<meta property="og:image" content="https://backtestbharat.github.io/img/buy-the-dip-strategy-bitcoin-25-day-moving-average/e8-chart_m.png">
+<meta property="og:image:alt" content="Buy the dip 25-day moving average rule versus holding Bitcoin, 3-year backtest on Binance BTC/USDT">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Buy the Dip Strategy on Bitcoin: Takashi Kotegawa&#x27;s 25-Day Moving Average Rule Gave 1 Trade in 3 Years">
+<meta name="twitter:description" content="We tested the 25-day moving average buy the dip rule on 3 years of Bitcoin: 1 trade, +11.6% before tax, +8.1% after India&#x27;s 30% tax. HODL: +105.4%.">
+<meta name="twitter:image" content="https://backtestbharat.github.io/img/buy-the-dip-strategy-bitcoin-25-day-moving-average/e8-chart_m.png">
+<meta name="msvalidate.01" content="7EBCBE0DADDDE1FE188175B416DD3E2A">
+<link rel="icon" type="image/png" sizes="180x180" href="/favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/bb-logo-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Backtest Bharat" href="/feed.xml">
+<link rel="preload" href="/assets/fonts/source-serif-4-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<meta property="article:published_time" content="2026-11-13T12:45:00+05:30">
+<meta property="article:modified_time" content="2026-11-13T12:45:00+05:30">
+<meta property="og:image:width" content="1440">
+<meta property="og:image:height" content="2490">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Buy the Dip Strategy on Bitcoin: Takashi Kotegawa's 25-Day Moving Average Rule Gave 1 Trade in 3 Years","description":"We tested the 25-day moving average buy the dip rule on 3 years of Bitcoin: 1 trade, +11.6% before tax, +8.1% after India's 30% tax. HODL: +105.4%.","image":["https://backtestbharat.github.io/img/buy-the-dip-strategy-bitcoin-25-day-moving-average/e8-chart_m.png"],"datePublished":"2026-11-13T12:45:00+05:30","dateModified":"2026-11-13T12:45:00+05:30","inLanguage":"en-IN","author":{"@type":"Organization","name":"Backtest Bharat","url":"https://backtestbharat.github.io/"},"publisher":{"@type":"Organization","name":"Backtest Bharat","url":"https://backtestbharat.github.io/","logo":{"@type":"ImageObject","url":"https://backtestbharat.github.io/assets/bb-logo-192.png","width":192,"height":192}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://backtestbharat.github.io/buy-the-dip-strategy-bitcoin-25-day-moving-average/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://backtestbharat.github.io/"},{"@type":"ListItem","position":2,"name":"All backtests","item":"https://backtestbharat.github.io/all-backtests/"},{"@type":"ListItem","position":3,"name":"Buy the Dip Strategy on Bitcoin: Takashi Kotegawa's 25-Day Moving Average Rule Gave 1 Trade in 3 Years","item":"https://backtestbharat.github.io/buy-the-dip-strategy-bitcoin-25-day-moving-average/"}]}</script>
+<style>
+.thp{font-size:17px;line-height:1.7;color:#191f28;font-family:Inter,'Helvetica Neue',Arial,sans-serif}
+.thp p{margin:0 0 14px}
+.thp h2{font-size:23px;line-height:1.4;margin:40px 0 14px;padding-top:6px;border-top:2px solid #eef0f3;color:#191f28}
+.thp .tldr{background:#f2f8ff;border-radius:14px;padding:18px 20px;margin:18px 0 22px}
+.thp .tldr b.t{display:block;font-size:15px;color:#1b64da;margin-bottom:6px}
+.thp .tldr ul{margin:0;padding-left:20px}.thp .tldr li{margin:4px 0}
+.thp .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0 20px}
+.thp .stat{background:#f9fafb;border-radius:12px;padding:14px 10px;text-align:center}
+.thp .stat .n{font-size:24px;font-weight:800;color:#1b64da;line-height:1.2}.thp .stat .n.g{color:#4e5968}.thp .stat .n.r{color:#e42939}
+.thp .stat .l{font-size:13px;color:#6b7684;margin-top:4px}
+.thp .toc{background:#f9fafb;border-radius:12px;padding:14px 18px;margin:0 0 10px;font-size:15px}
+.thp .toc ol{margin:6px 0 0;padding-left:20px}.thp .toc a{color:#333d4b;text-decoration:none}
+.thp .rule{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1.5px solid #e5e8eb;border-radius:12px;padding:12px 14px;margin:8px 0}
+.thp .rule .k{flex:none;width:28px;height:28px;border-radius:50%;background:#3182f6;color:#fff;font-weight:800;text-align:center;line-height:28px;font-size:15px}
+.thp .rule b{display:block}
+.thp .warn{background:#fff8e6;border-left:4px solid #ffb020;border-radius:8px;padding:12px 16px;margin:14px 0;font-size:16px}
+.thp table{width:100%;border-collapse:collapse;font-size:15px;margin:10px 0 18px}
+.thp th,.thp td{border-bottom:1px solid #e5e8eb;padding:10px 8px;text-align:left}.thp th{background:#f2f4f6;font-weight:700}
+.thp td.up{color:#1b64da;font-weight:700}.thp td.dn{color:#e42939;font-weight:700}
+.thp .cta{background:#191f28;color:#fff;border-radius:14px;padding:20px;margin:18px 0}
+.thp .cta p{margin:0 0 12px;color:#e5e8eb}.thp .cta b{color:#fff}
+.thp .btn{display:inline-block;background:#3182f6;color:#fff!important;text-decoration:none;font-weight:700;border-radius:10px;padding:12px 18px;margin:4px 6px 4px 0}
+.thp .btn.w{background:#fff;color:#191f28!important}
+.thp .small{font-size:13px;color:#8b95a1;line-height:1.6}
+.thp details{border:1.5px solid #e5e8eb;border-radius:12px;padding:12px 16px;margin:8px 0}
+.thp summary{font-weight:700;cursor:pointer}
+.thp details p{margin:10px 0 0}
+@media(max-width:480px){.thp{font-size:16px}.thp .stats{grid-template-columns:1fr 1fr 1fr;gap:6px}.thp .stat .n{font-size:19px}.thp h2{font-size:20px}}
+</style>
+<style>.thp .bnx{display:none;background:#fff8e1;border:2px solid #f0b90b;border-radius:14px;padding:18px 20px;margin:16px 0}.thp .bnx .btn{background:#f0b90b;color:#191f28!important}.thp .asci{font-size:13px;font-weight:700;color:#4e5968;margin:0 0 10px}</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head compact">
+<p class="brand"><a href="/"><img src="/assets/bb-logo-96.png" alt="" width="96" height="96"><span>Backtest Bharat</span></a></p>
+<p class="tag">Independent backtests for Indian crypto traders. After fees, after tax.</p>
+<nav class="tabs" aria-label="Main"><a href="/">Home</a><a href="/all-backtests/">All Backtests</a><a href="/about/">About</a><a href="/disclaimer/">Disclaimer</a><a href="/privacy-policy/">Privacy Policy</a></nav>
+</header>
+<main id="main">
+<article>
+<nav class="bbcrumb" aria-label="Breadcrumb"><a href="/">Home</a><i aria-hidden="true">/</i><a href="/all-backtests/">All backtests</a><i aria-hidden="true">/</i><a href="/all-backtests/#buy-the-dip">Buy the Dip</a></nav>
+<h1 class="page-title">Buy the Dip Strategy on Bitcoin: Takashi Kotegawa&#x27;s 25-Day Moving Average Rule Gave 1 Trade in 3 Years</h1>
+<p class="post-meta"><time datetime="2026-11-13T12:45:00+05:30">13 Nov 2026</time> · Backtest Bharat</p>
+<div class="post-body">
+<div class="thp">
+<p>The buy the dip strategy built on Takashi Kotegawa's 25-day moving average number traded once on Binance BTC/USDT from Nov 2023 to Nov 2026 and returned +11.6% with a 0.1% fee per side. Simply holding made +105.4%.</p>
+<p>A Japanese trader known online as BNF once wrote down the number he used for buying falling stocks: 20% below the 25-day moving average. (In India BNF usually means Bank Nifty Futures. Here it is one man's nickname.) <b>On 3 years of Bitcoin it gave one buy signal in 1,096 days.</b></p>
+
+<div class="tldr"><b class="t">Key takeaways</b>
+<ul>
+<li><b>The buy the dip rule:</b> buy when the daily close is 20% or more below the 25-day moving average, and sell at the close three days later.</li>
+<li>On <b>Binance BTC/USDT, Nov 2023 to Nov 2026</b> (0.1% fee), it traded once. ₹1 lakh became <b>₹1,11,600</b>. Simply holding Bitcoin made it ₹2,05,400.</li>
+<li>After India's 30% crypto tax, the rule kept <b>₹1,08,100</b> and holding kept ₹1,73,800. One trade is too few to give a win rate.</li>
+</ul></div>
+
+<div class="stats">
+<div class="stat"><div class="n">+11.6%</div><div class="l">Dip rule, before tax (1 trade)</div></div>
+<div class="stat"><div class="n">+8.1%</div><div class="l">Dip rule, after 30% tax</div></div>
+<div class="stat"><div class="n g">+73.8%</div><div class="l">HODL, after tax</div></div>
+</div>
+
+<div class="toc"><b>Contents</b><ol>
+<li><a href="#who">Who is BNF (Takashi Kotegawa)?</a></li>
+<li><a href="#rules">The 4 rules we tested</a></li>
+<li><a href="#example">Real chart: one win, one loss</a></li>
+<li><a href="#result">3-year Binance backtest</a></li>
+<li><a href="#filter">What if you buy smaller dips?</a></li>
+<li><a href="#long">Side check: 9 years of data</a></li>
+<li><a href="#tax">After India's 30% crypto tax</a></li>
+<li><a href="#tds">1% TDS</a></li>
+<li><a href="#tools">Tools</a></li>
+<li><a href="#watch">Videos</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol></div>
+
+<h2 id="who">Who is BNF (Takashi Kotegawa)?</h2>
+<ul>
+<li>BNF is the name he used on 2channel, a Japanese message board. A 2008 newspaper profile says it comes from the initials of Victor Niederhoffer, a US investor he admired. It has nothing to do with Bank Nifty</li>
+<li>Bloomberg reported his real name, Takashi Kotegawa, in December 2005</li>
+<li>He started trading shares online in 2000 with ¥1.6 million of savings</li>
+<li>On Dec 8, 2005 a broker meant to sell 1 J-Com share at ¥610,000 and instead offered 610,000 shares at ¥1. Kotegawa, then 27, bought 7,100 shares and made more than ¥2 billion</li>
+<li>He told Bloomberg: "I was so scared to see massive selling. I didn't know what was happening."</li>
+<li>In February 2008 a reporter saw the total on his trading screen: ¥19,465,864,683</li>
+</ul>
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;margin:16px 0 6px"><iframe src="https://www.youtube-nocookie.com/embed/4GCgo1FlKRw" title="Takashi Kotegawa (BNF), In His Own Words" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<p class="small" style="margin:0 0 18px;color:#6b7684">▶ English: his magazine interviews and his own 2004 message-board posts on the 25-day rule. Source: Guanxinated (YouTube, 2021)</p>
+<div class="warn">Newer net worth figures you see online, in dollars or in rupees, have no source we could trace. The 2008 number above is the last one we found in a newspaper interview.</div>
+
+<h2 id="rules">The 4 rules we tested</h2>
+<p>In a post dated Oct 3, 2004, Kotegawa wrote that the key number for short-term dip buying is the <b>deviation rate</b>: how far the price is from its 25-day moving average.</p>
+<ul>
+<li>In the falling markets of 2001 and 2002, he wanted a stock at least 20% below its 25-day average, and felt safe buying only at 35% or more</li>
+<li>From late 2003, he wrote, stocks bounced after only a 15% gap, and there were few chances to buy this way at all</li>
+<li>In a post dated Nov 17, 2004, he described the rebounds as lasting one or two nights</li>
+</ul>
+<p>We turned that into a fixed rule a computer can follow.</p>
+<div class="rule"><span class="k">1</span><div><b>Draw the average</b>25-day simple average of daily closing prices</div></div>
+<div class="rule"><span class="k">2</span><div><b>Measure the gap</b>Deviation = (close ÷ 25-day average − 1) × 100</div></div>
+<div class="rule"><span class="k">3</span><div><b>Buy the dip</b>If the day closes 20% or more below the average, buy at that close</div></div>
+<div class="rule"><span class="k">4</span><div><b>Sell on day three</b>Sell at the close of the third day after buying, win or lose</div></div>
+<p>His numbers were for Japanese stocks in 2001 and 2002. He used them as a first filter and changed them with the market. <b>Using 20% as a fixed rule on Bitcoin is our experiment, not his method.</b></p>
+<div class="separator" style="text-align:center;margin:16px 0 6px"><img src="/img/buy-the-dip-strategy-bitcoin-25-day-moving-average/e8-quote.png" alt="Takashi Kotegawa (BNF) 2004 post: he cannot recommend buying against the trend by looking only at the deviation rate" style="max-width:100%;height:auto;border-radius:12px;border:1px solid #e5e8eb" border="0" width="1440" height="1372" /></div>
+<p class="small" style="margin:0 0 18px;color:#6b7684">His own warning, from a post dated Nov 17, 2004. Source: archived 2channel post, our translation</p>
+<p>On Binance the daily candle closes at 00:00 UTC, which is <b>5:30 AM in India</b>. That is the "close" in this test.</p>
+<div class="separator" style="text-align:center;margin:16px 0 6px"><img src="/img/buy-the-dip-strategy-bitcoin-25-day-moving-average/e8-dev.png" alt="Bitcoin daily close versus its 25-day moving average, Nov 2023 to Nov 2026: only one close was 20% or more below the average" style="max-width:100%;height:auto;border-radius:12px;border:1px solid #e5e8eb" border="0" width="1440" height="2300" loading="lazy" /></div>
+<p class="small" style="margin:0 0 18px;color:#6b7684">In 1,096 days, Bitcoin closed 20% or more below its 25-day average once. Backtest Bharat calculation</p>
+
+<h2 id="example">Real chart: one win, one loss</h2>
+<p>The win is the only trade the 20% rule made. The loss comes from a looser 15% version of the rule, one day earlier in the same crash.</p>
+<table>
+<tr><th>Step</th><th>20% rule (win)</th><th>15% rule (loss)</th></tr>
+<tr><td>Signal day</td><td>Feb 5, 2026</td><td>Feb 4, 2026</td></tr>
+<tr><td>25-day average</td><td>$86,852.37</td><td>$87,976.52</td></tr>
+<tr><td>Close, bought here</td><td>$62,909.86</td><td>$73,165.83</td></tr>
+<tr><td>Gap from average</td><td>-27.6%</td><td>-16.8%</td></tr>
+<tr><td>Sold, third day's close</td><td>Feb 8 at $70,330.38</td><td>Feb 7 at $69,289.38</td></tr>
+<tr><td>Result after fees</td><td class="up">+11.57%</td><td class="dn">-5.49%</td></tr>
+</table>
+<p>On Feb 5 Bitcoin fell 14.0% in one day. The next day it touched $60,000 and then closed 12.2% higher.</p>
+<p><b>Same crash, one day apart, opposite results.</b> The Feb 4 buyer was down 17.99% at the lowest point of the next two days. Even the Feb 5 buyer saw the price go 4.63% below the buy price before it bounced.</p>
+
+<h2 id="result">3-year Binance backtest results</h2>
+<div class="separator" style="text-align:center;margin:16px 0 6px"><img src="/img/buy-the-dip-strategy-bitcoin-25-day-moving-average/e8-chart_m.png" alt="Buy the dip 25-day moving average rule versus holding Bitcoin, 3-year backtest on Binance BTC/USDT" style="max-width:100%;height:auto;border-radius:12px;border:1px solid #e5e8eb" border="0" width="1440" height="2490" loading="lazy" /></div>
+<p class="small" style="margin:0 0 18px;color:#6b7684">The rule line is flat for 3 years except one step in Feb 2026. Backtest Bharat calculation</p>
+<table>
+<tr><th>Metric</th><th>Dip rule (20%)</th><th>HODL</th></tr>
+<tr><td>₹1 lakh after 3 years, before tax</td><td>₹1,11,600</td><td class="up">₹2,05,400</td></tr>
+<tr><td>₹1 lakh after 3 years, after 30% tax</td><td>₹1,08,100</td><td class="up">₹1,73,800</td></tr>
+<tr><td>3-year return, before tax</td><td>+11.6%</td><td class="up">+105.4%</td></tr>
+<tr><td>Worst drop (max drawdown)</td><td class="up">-1.8%</td><td class="dn">-53.0%</td></tr>
+<tr><td>Last 1 year</td><td class="up">+11.6%</td><td class="dn">-28.0%</td></tr>
+<tr><td>Trades</td><td>1 trade, 1 win</td><td>-</td></tr>
+<tr><td>Average win / loss</td><td>+11.57% / no losing trade</td><td>-</td></tr>
+<tr><td>Days with money in the market</td><td>3 of 1,096</td><td>1,096</td></tr>
+</table>
+<div class="warn"><b>The uncomfortable number: 1.</b> One trade in three years. Its win rate is 100%, and that means nothing. A single coin toss also has a 100% record. The rule's 3-year return was 93.8 percentage points below simply holding.</div>
+<ul>
+<li>The tiny drawdown has a simple cause: the money was in the market for 3 days and sat idle for 1,093</li>
+<li>The last 1 year looks good only because the one trade happened inside it</li>
+<li>Fees hardly matter with one trade: with zero fees the result is +11.8% instead of +11.6%</li>
+</ul>
+
+<h2 id="filter">What if you buy smaller dips?</h2>
+<p>Waiting 3 years for one signal is hard. The usual answer is to lower the bar. Kotegawa himself wrote about a 15% gap in stronger markets, so we tested 15% and 10% too.</p>
+<div class="separator" style="text-align:center;margin:16px 0 6px"><img src="/img/buy-the-dip-strategy-bitcoin-25-day-moving-average/e8-th.png" alt="Buy the dip at 20%, 15% and 10% below the 25-day average: 1 lakh rupees after 3 years and after India 30% crypto tax" style="max-width:100%;height:auto;border-radius:12px;border:1px solid #e5e8eb" border="0" width="1440" height="1710" loading="lazy" /></div>
+<p class="small" style="margin:0 0 18px;color:#6b7684">More signals, less money after tax</p>
+<table>
+<tr><th>Buy level</th><th>Trades, win rate</th><th>₹1 lakh, before / after tax</th></tr>
+<tr><td>20% below</td><td>1 trade, 1 win</td><td>₹1,11,600 / ₹1,08,100</td></tr>
+<tr><td>15% below</td><td>6 trades, 50.0%</td><td>₹1,00,700 / <span style="color:#e42939;font-weight:700">₹96,000</span></td></tr>
+<tr><td>10% below</td><td>17 trades, 58.8%</td><td>₹1,04,300 / <span style="color:#e42939;font-weight:700">₹92,200</span></td></tr>
+<tr><td>HODL</td><td>1 purchase</td><td>₹2,05,400 / ₹1,73,800</td></tr>
+</table>
+<table>
+<tr><th>Buy level</th><th>Worst drop</th><th>Last 1 year</th></tr>
+<tr><td>20% below</td><td class="up">-1.8%</td><td class="up">+11.6%</td></tr>
+<tr><td>15% below</td><td>-14.2%</td><td class="dn">-11.6%</td></tr>
+<tr><td>10% below</td><td>-25.6%</td><td class="dn">-20.4%</td></tr>
+<tr><td>HODL</td><td class="dn">-53.0%</td><td class="dn">-28.0%</td></tr>
+</table>
+<p>The 10% version won 10 of its 17 trades and still made only +4.3% before tax. Its average win was +4.36% and its average loss was -5.23%. <b>Small dips often kept falling for three more days.</b></p>
+<p>In the last year it lost 20.4%, with 6 losing trades out of 11. More signals did not mean more profit.</p>
+
+<h2 id="long">Side check: 9 years of Binance data</h2>
+<p>One trade cannot tell us whether a rule works. So we also ran the same 20% rule on every daily candle Binance has for BTC/USDT, from Sep 10, 2017 to Nov 9, 2026.</p>
+<p>This is outside our usual 3-year window. Read it as background, not as the headline.</p>
+<table>
+<tr><th>Sep 2017 to Nov 2026</th><th>Dip rule (20%)</th><th>HODL</th></tr>
+<tr><td>Trades</td><td>24 (18 won, 6 lost)</td><td>1 purchase</td></tr>
+<tr><td>₹1 lakh became, before tax</td><td>₹2,09,400</td><td class="up">₹17,69,700</td></tr>
+<tr><td>₹1 lakh became, after 30% tax</td><td>₹1,41,800</td><td class="up">₹12,68,800</td></tr>
+<tr><td>Worst drop</td><td class="up">-27.5%</td><td class="dn">-83.2%</td></tr>
+<tr><td>Days with money in the market</td><td>72 of 3,348</td><td>3,348</td></tr>
+</table>
+<ul>
+<li>The signals came in clusters: 11 of the 24 were in 2018 and 5 in 2022. There were none in 2019, 2023, 2024 or 2025</li>
+<li>Best trade: bought Mar 16, 2020, +22.29% in three days. Worst: bought Nov 23, 2018, -12.81%</li>
+<li>In Nov 2018 two signals in a row lost -11.18% and -12.81%. A 20% gap did not mean the fall was over</li>
+</ul>
+<p>18 wins from 24 trades is a 75.0% win rate. Even so, 9 years of this rule made ₹1 lakh into about ₹2.09 lakh, while holding made it about ₹17.7 lakh. <b>A high win rate and a high return are two different things.</b></p>
+
+<h2 id="tax">After India's 30% crypto tax</h2>
+<div class="separator" style="text-align:center;margin:16px 0 6px"><img src="/img/buy-the-dip-strategy-bitcoin-25-day-moving-average/e8-tax.png" alt="Buy the dip rule on Bitcoin: 1 lakh rupees before tax, after India 30% crypto tax, and holding after tax" style="max-width:100%;height:auto;border-radius:12px;border:1px solid #e5e8eb" border="0" width="1440" height="1710" loading="lazy" /></div>
+<p class="small" style="margin:0 0 18px;color:#6b7684">One winning trade, taxed once</p>
+<ul>
+<li>Section 194 of the Income-tax Act, 2025 (Table, item 4) puts a 30% rate on "any income from the transfer of any virtual digital asset"</li>
+<li>The same item says no "set off of any loss" is allowed, and that the loss "shall not be allowed to be carried forward"</li>
+<li>The table gives one rate. It has no separate rate for a 3-day trade and a 3-year holding</li>
+</ul>
+<div class="separator" style="text-align:center;margin:16px 0 6px"><img src="/img/buy-the-dip-strategy-bitcoin-25-day-moving-average/ref-itd-194m.jpg" alt="Income-tax Act 2025 Section 194 Table item 4: income from transfer of virtual digital asset taxed at 30%, no set-off of loss" style="max-width:100%;height:auto;border-radius:12px;border:1px solid #e5e8eb" border="0" width="1240" height="825" loading="lazy" /></div>
+<p class="small" style="margin:0 0 18px;color:#6b7684">The actual rule: 30% rate, and losses cannot be set off or carried forward. Source: Income Tax Department, Govt of India</p>
+<table>
+<tr><th></th><th>Dip rule (20%)</th><th>Dip rule (10%)</th></tr>
+<tr><td>Times you sell</td><td>1</td><td>17</td></tr>
+<tr><td>Winning sales taxed</td><td>1</td><td>10</td></tr>
+<tr><td>Losing sales, no relief</td><td>0</td><td class="dn">7</td></tr>
+<tr><td>3 years, before tax</td><td>+11.6%</td><td>+4.3%</td></tr>
+<tr><td>3 years, after 30% tax</td><td>+8.1%</td><td class="dn">-7.8%</td></tr>
+</table>
+<p>With one winning trade the tax is simple. Out of about ₹11,600 of profit, about ₹3,500 goes as tax and ₹8,100 stays.</p>
+<p>The 10% version shows the harder side of the rule. Its 10 winners are taxed one by one and its 7 losers give no relief, so <b>a +4.3% result becomes -7.8%.</b> The <a href="https://backtestbharat.blogspot.com/2026/11/9-20-ema-strategy-win-rate-bitcoin-backtest-india-tax.html">9 20 EMA test</a> showed the same effect with more trades.</p>
+
+<h2 id="tds">1% TDS on each sale</h2>
+<p>The Income Tax Department's guide on virtual digital assets says the person paying for a crypto sale must deduct tax at 1% of the amount. When the sale goes through an exchange that pays the seller directly, the exchange deducts it.</p>
+<table>
+<tr><th>Buy level</th><th>Sales in 3 years</th><th>Sales in FY 2025-26</th></tr>
+<tr><td>20% below</td><td>1</td><td>1</td></tr>
+<tr><td>15% below</td><td>6</td><td>4</td></tr>
+<tr><td>10% below</td><td>17</td><td>8</td></tr>
+</table>
+<p>The department also says that when the tax paid, including tax deducted at source, is more than the tax due, the excess can be claimed as a refund by filing the return of income. Until then that 1% is not in the trading account.</p>
+<p>Our backtest does not subtract TDS. With one sale in three years the effect is small. Check how your own exchange applies it.</p>
+
+<h2 id="tools">Tools to check it yourself</h2>
+<p>The live chart below is Bitcoin on Binance, daily candles in India time. On TradingView, add a Moving Average with length 25 from the Indicators menu. Then compare each day's close with that line.</p>
+<div style="height:460px;width:100%;margin:12px 0 6px"><div class="tradingview-widget-container" style="height:100%;width:100%"><div class="tradingview-widget-container__widget" style="height:100%;width:100%"></div>
+<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>{"autosize":true,"symbol":"BINANCE:BTCUSDT","interval":"D","timezone":"Asia/Kolkata","theme":"light","style":"1","locale":"en","hide_side_toolbar":true,"hide_top_toolbar":true,"allow_symbol_change":false,"support_host":"https://www.tradingview.com"}</script></div></div>
+<p class="small" style="margin:0 0 18px;color:#6b7684">Live chart: TradingView widget, BINANCE:BTCUSDT daily</p>
+<div class="cta">
+<p><b>See the 25-day average on your own chart</b><br>Add a 25-day Moving Average to a daily Bitcoin chart and you can measure the gap yourself. A close 20% below that line happened once in the last 3 years.</p>
+<a class="btn" href="https://www.tradingview.com/?aff_id=1174338&amp;source=blog_en" target="_blank" rel="sponsored nofollow">Open TradingView</a>
+<p class="small" style="margin:12px 0 0;color:#b0b8c1">#Ad · Affiliate link. If you buy a paid TradingView plan through it, Backtest Bharat earns a commission at no extra cost to you.</p>
+</div>
+<div class="bnx" id="bnx">
+<p class="asci">Crypto products and NFTs are unregulated and can be highly risky. There may be no regulatory recourse for any loss from such transactions.</p>
+<p><b>Trading on Binance from India?</b> Binance completed registration with India's Financial Intelligence Unit (FIU-IND) in 2024. This backtest uses Binance's 0.1% spot fee.</p>
+<a class="btn" id="bnlink" href="#" target="_blank" rel="sponsored nofollow">Open a Binance account</a>
+<p class="small" style="margin:10px 0 0">#Ad · Referral link. Backtest Bharat may earn a share of trading fees. Shown only to readers in eligible regions. Not investment advice.</p>
+</div>
+
+<h2 id="watch">Watch: the indicator, and Kotegawa's story in Hindi</h2>
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;margin:16px 0 6px"><iframe src="https://www.youtube-nocookie.com/embed/KeQcLaWe_8g" title="Distance From Moving Average Explained, Mean Reversion Indicator" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<p class="small" style="margin:0 0 18px;color:#6b7684">▶ How the distance from a moving average is calculated, and why a fixed threshold should not be used blindly. Source: Dhan (YouTube, 2026)</p>
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;margin:16px 0 6px"><iframe src="https://www.youtube-nocookie.com/embed/dO4Zfj3XsSY" title="No.1 Trader in the World Takashi Kotegawa, How he Made Money from Stock Market" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<p class="small" style="margin:0 0 18px;color:#6b7684">▶ Hindi: a video on Takashi Kotegawa and how he made money in the stock market. Source: Pushkar Raj Thakur (YouTube, 2025)</p>
+<p class="small" style="margin:0 0 18px;color:#6b7684">These videos are by other creators. Their numbers and claims are theirs and were not checked by us.</p>
+
+<h2 id="faq">FAQ</h2>
+<details><summary>Does the buy the dip strategy work on Bitcoin?</summary><p>On Binance BTC/USDT from Nov 2023 to Nov 2026, buying a close 20% or more below the 25-day average and selling three days later traded once and returned +11.6% after a 0.1% fee. Holding returned +105.4%. One trade is too few to say it works. Past results do not guarantee future returns.</p></details>
+<details><summary>What is the win rate of this buy the dip rule?</summary><p>On Binance BTC/USDT from Nov 2023 to Nov 2026, with a 0.1% fee per side, it made 1 trade, so a win rate would mean nothing. On all Binance data since Sep 2017 the same rule made 24 trades and 18 were profitable (75.0%), yet it earned far less than holding.</p></details>
+<details><summary>What is the moving average deviation rate?</summary><p>It is how far the price is from its moving average, in percent: (close ÷ 25-day average − 1) × 100. On Feb 5, 2026 Bitcoin closed 27.6% below its 25-day average. That was the only close 20% or more below it in the 3-year window.</p></details>
+<details><summary>Who is BNF? Is it Bank Nifty?</summary><p>Not in this post. In India BNF usually means Bank Nifty Futures. Here BNF is the online nickname of Takashi Kotegawa, a Japanese stock trader who became known after the J-Com trade of December 2005.</p></details>
+<details><summary>Does the Takashi Kotegawa strategy still work?</summary><p>He gave the 25-day deviation numbers for Japanese stocks in 2001 and 2002, and wrote in 2004 that he could not recommend buying on the deviation rate alone. In a 2008 interview he again said the deviation rate alone is not enough. Our Bitcoin test is a fixed-rule experiment, not his method.</p></details>
+<details><summary>What is Takashi Kotegawa's net worth?</summary><p>The last figure we could trace is from a February 2008 newspaper interview, where the reporter saw ¥19,465,864,683 (about ¥19.5 billion) on his trading screen. We found no reliable source for newer figures, so we do not quote a current number or a rupee value.</p></details>
+<details><summary>How does India's 30% crypto tax change the result?</summary><p>On Binance BTC/USDT from Nov 2023 to Nov 2026, with a 0.1% fee per side and 30% tax on the one winning trade, ₹1 lakh became ₹1,08,100 instead of ₹1,11,600. Versions that trade more often did worse: buying 10% dips went from +4.3% before tax to -7.8% after tax.</p></details>
+
+<h2>Method and sources</h2>
+<ul class="small">
+<li>Data: Binance BTC/USDT daily candles (00:00 UTC), Nov 10, 2023 to Nov 9, 2026. Fee 0.1% per side, long only, spot, no leverage, no slippage, full capital on each trade</li>
+<li>Rule: 25-day simple average of closes, including the signal day. Buy at the close when the close is 20% or more below the average. Sell at the close three days later. One position at a time, no stop-loss. Max drawdown is measured on daily closes</li>
+<li>A second, separately written calculation on freshly downloaded data gave the same trades and returns</li>
+<li>Side check: Sep 10, 2017 (the first day Binance data gives a 25-day average) to Nov 9, 2026, same rule and costs</li>
+<li>Tax model: 30% of each winning trade's profit deducted at exit, losses not set off (Income-tax Act, 2025, Section 194 Table item 4). Simplified: only the 30% rate is modelled. Any surcharge or cess and the TDS cash lock are not included. Check with a chartered accountant</li>
+<li>Takashi Kotegawa: <a href="https://www.theglobeandmail.com/report-on-business/two-investors-reap-millions-from-bungled-j-com-trade-on-tokyo-exchange/article18255536" target="_blank" rel="nofollow">Bloomberg report in The Globe and Mail, Dec 19, 2005</a> (name, age, 7,100 shares, profit, quote); <a href="https://web.archive.org/web/20090615082804/https://www.zakzak.co.jp/people/archive/20080207.html" target="_blank" rel="nofollow">ZAKZAK profile, Feb 7, 2008</a> and <a href="https://web.archive.org/web/20080208142534/http://www.zakzak.co.jp/top/2008_01/t2008012424_all.html" target="_blank" rel="nofollow">ZAKZAK interview, Jan 24, 2008</a> (archived, in Japanese: nickname, ¥1.6 million start, screen total, 2008 remark on the deviation rate)</li>
+<li>The rule in his own words: archived copies of his 2channel posts of <a href="http://web.archive.org/web/20081220044806/http://bnfbnf.web.fc2.com/s_gihoukenkyu2.htm" target="_blank" rel="nofollow">Oct 3, 2004</a> and <a href="http://web.archive.org/web/20081220044806/http://bnfbnf.web.fc2.com/s_gihoukenkyu3.htm" target="_blank" rel="nofollow">Nov 17, 2004</a> (in Japanese, kept by a fan archive). Translations are ours</li>
+<li>Tax sources: <a href="https://www.incometaxindia.gov.in/w/section-194-78" target="_blank" rel="nofollow">Income-tax Act, 2025, Section 194</a>; <a href="https://www.incometaxindia.gov.in/w/tds-on-payment-for-the-transfer-of-virtual-digital-assets-vdas-" target="_blank" rel="nofollow">Income Tax Department, TDS on transfer of VDAs</a>; <a href="https://www.incometaxindia.gov.in/w/refund-of-excess-tax-paid-160-by-the-taxpayer" target="_blank" rel="nofollow">Income Tax Department, Refund of excess tax paid by the taxpayer</a></li>
+<li>Binance in India: <a href="https://sansad.in/getFile/loksabhaquestions/annex/187/AU5805_lMTYNK.pdf?source=pqals" target="_blank" rel="nofollow">Ministry of Finance, answer to Lok Sabha Unstarred Question 5805 (Mar 30, 2026), Annexure I</a>; <a href="https://fiuindia.gov.in/pdfs/judgements/Binance_Order_10_2024.pdf" target="_blank" rel="nofollow">FIU-IND order, June 19, 2024</a>; <a href="https://www.binance.com/en/blog/regulation/3022489348045738409" target="_blank" rel="nofollow">Binance blog, Aug 15, 2024</a></li>
+<li>Last checked: Nov 12, 2026</li>
+</ul>
+<p class="small">This article is for education only and is not investment advice. Results are from past data and do not guarantee future returns. Crypto trading can lose money. Crypto products and NFTs are unregulated and can be highly risky. There may be no regulatory recourse for any loss from such transactions.</p>
+</div>
+<script>(function(){var REF="https://www.binance.com/en/register?ref=21711593";var ok={"IN":1};function show(c){if(ok[c]){var b=document.getElementById("bnx"),a=document.getElementById("bnlink");if(b&&a){a.href=REF;b.style.display="block";}}}fetch("https://1.1.1.1/cdn-cgi/trace").then(function(r){return r.text()}).then(function(t){var m=t.match(/loc=([A-Z]{2})/);show(m?m[1]:"")}).catch(function(){fetch("https://get.geojs.io/v1/ip/country.json").then(function(r){return r.json()}).then(function(j){show(j.country)}).catch(function(){})});})();</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Does the buy the dip strategy work on Bitcoin?","acceptedAnswer":{"@type":"Answer","text":"On Binance BTC/USDT from Nov 2023 to Nov 2026, buying a close 20% or more below the 25-day average and selling three days later traded once and returned +11.6% after a 0.1% fee. Holding returned +105.4%. One trade is too few to say it works. Past results do not guarantee future returns."}},
+{"@type":"Question","name":"What is the win rate of this buy the dip rule?","acceptedAnswer":{"@type":"Answer","text":"On Binance BTC/USDT from Nov 2023 to Nov 2026, with a 0.1% fee per side, it made 1 trade, so a win rate would mean nothing. On all Binance data since Sep 2017 the same rule made 24 trades and 18 were profitable (75.0%), yet it earned far less than holding."}},
+{"@type":"Question","name":"What is the moving average deviation rate?","acceptedAnswer":{"@type":"Answer","text":"It is how far the price is from its moving average, in percent: (close ÷ 25-day average − 1) × 100. On Feb 5, 2026 Bitcoin closed 27.6% below its 25-day average. That was the only close 20% or more below it in the 3-year window."}},
+{"@type":"Question","name":"Who is BNF? Is it Bank Nifty?","acceptedAnswer":{"@type":"Answer","text":"Not in this post. In India BNF usually means Bank Nifty Futures. Here BNF is the online nickname of Takashi Kotegawa, a Japanese stock trader who became known after the J-Com trade of December 2005."}},
+{"@type":"Question","name":"Does the Takashi Kotegawa strategy still work?","acceptedAnswer":{"@type":"Answer","text":"He gave the 25-day deviation numbers for Japanese stocks in 2001 and 2002, and wrote in 2004 that he could not recommend buying on the deviation rate alone. In a 2008 interview he again said the deviation rate alone is not enough. Our Bitcoin test is a fixed-rule experiment, not his method."}},
+{"@type":"Question","name":"What is Takashi Kotegawa's net worth?","acceptedAnswer":{"@type":"Answer","text":"The last figure we could trace is from a February 2008 newspaper interview, where the reporter saw ¥19,465,864,683 (about ¥19.5 billion) on his trading screen. We found no reliable source for newer figures, so we do not quote a current number or a rupee value."}},
+{"@type":"Question","name":"How does India's 30% crypto tax change the result?","acceptedAnswer":{"@type":"Answer","text":"On Binance BTC/USDT from Nov 2023 to Nov 2026, with a 0.1% fee per side and 30% tax on the one winning trade, ₹1 lakh became ₹1,08,100 instead of ₹1,11,600. Versions that trade more often did worse: buying 10% dips went from +4.3% before tax to -7.8% after tax."}}
+]}</script>
+</div>
+</article>
+<nav class="bbnav" aria-label="More backtests"><h2>More backtests</h2>
+<ul class="plist">
+<li><a href="/200-day-moving-average-strategy-bitcoin-backtest-india-tax/">200 Day Moving Average Strategy on Bitcoin: 200 DMA Win Rate and Backtest After India&#x27;s 30% Crypto Tax</a><time datetime="2026-11-13T12:46:00+05:30">13 Nov 2026</time><p>200 day moving average strategy on Bitcoin, 3-year backtest: 15 trades, 33.3% win rate, +88.2% before and +48.7% after India&#x27;s 30% tax.</p></li>
+</ul>
+<a class="all" href="/all-backtests/">All backtests (2) →</a></nav>
+</main>
+<footer class="site-foot"><div>
+<p>For education only, not investment advice. Backtests use past data and do not guarantee future returns. We are not SEBI registered.</p>
+<p>Crypto products and NFTs are unregulated and can be highly risky. There may be no regulatory recourse for any loss from such transactions.</p>
+<p><a href="/disclaimer/">Disclaimer</a> · <a href="/privacy-policy/">Privacy Policy</a> · <a href="https://backtestbharat.blogspot.com/p/all-backtests.html">Earlier posts</a></p>
+<p>© 2026 Backtest Bharat</p>
+</div></footer>
+</body>
+</html>

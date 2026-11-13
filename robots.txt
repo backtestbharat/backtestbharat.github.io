@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://backtestbharat.github.io/sitemap.xml
