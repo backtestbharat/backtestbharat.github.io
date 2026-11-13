@@ -53,7 +53,6 @@ a.all:hover{text-decoration:underline;text-underline-offset:3px}
 .count{font-size:14px;color:#6b7684;margin:0 0 4px}
 .note{font-size:15px;color:#4e5968;margin:22px 0 0}
 .post-body{margin-top:4px}
-.post-body .thp table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
 .site-foot{border-top:1px solid #eef0f3;background:#f9fafb;color:#6b7684;font-size:13.5px;line-height:1.65}
 .site-foot div{max-width:756px;margin:0 auto;padding:24px 18px 34px}
 .site-foot p{margin:0 0 8px}
